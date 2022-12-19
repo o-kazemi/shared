@@ -1,0 +1,1791 @@
+(base) omid@omid-HP:~/Program/Trilinos-master/build$ $ cmake -DTrilinos_ENABLE_Sacado=ON -DTrilinos_ENABLE_Teuchos=OFF -DCMAKE_INSTALL_PREFIX=/home/omid/Program/Trilinos-master -DCMAKE_CXX_STANDARD=14 /home/omid/Program/Trilinos-master
+$: command not found
+(base) omid@omid-HP:~/Program/Trilinos-master/build$ cmake -DTrilinos_ENABLE_Sacado=ON -DTrilinos_ENABLE_Teuchos=OFF -DCMAKE_INSTALL_PREFIX=/home/omid/Program/Trilinos-master -DCMAKE_CXX_STANDARD=14 /home/omid/Program/Trilinos-master
+
+Configuring Trilinos build directory
+
+-- PROJECT_SOURCE_DIR='/home/omid/Program/Trilinos-master'
+-- PROJECT_BINARY_DIR='/home/omid/Program/Trilinos-master/build'
+-- Trilinos_TRIBITS_DIR='/home/omid/Program/Trilinos-master/cmake/tribits'
+-- TriBITS_VERSION_STRING='0.9 (Dev)'
+-- CMAKE_VERSION='3.22.1'
+-- CMAKE_GENERATOR='Unix Makefiles'
+-- CMAKE_HOST_SYSTEM_NAME='Linux'
+-- Trilinos_HOSTNAME='omid-HP'
+-- PYTHON_EXECUTABLE='/home/omid/anaconda3/bin/python'
+
+Setting up major user options ...
+
+
+***
+*** NOTE: Setting Trilinos_ENABLE_PyTrilinos=OFF because BUILD_SHARED_LIBS=OFF!
+***
+
+-- Setting Trilinos_ENABLE_TriKota=OFF because '/home/omid/Program/Trilinos-master/packages/TriKota/Dakota' does not exist!
+-- Trilinos_GENERATE_REPO_VERSION_FILE='ON'
+
+NOTE: Skipping generation of TrilinosRepoVersion.txt because project source is not a git repo!
+
+Reading list of native TPLs from /home/omid/Program/Trilinos-master/TPLsList.cmake
+
+-- After reading above TPLsList.cmake file: Trilinos_NUM_DEFINED_TPLS='120'
+
+Reading list of native packages from /home/omid/Program/Trilinos-master/PackagesList.cmake
+
+-- After reading above PackagesList.cmake file: Trilinos_NUM_DEFINED_INTERNAL_TOPLEVEL_PACKAGES='66'
+
+Processing Project, Repository, and Package dependency files and building internal dependencies graph ...
+
+-- Disabling KokkosSimd by default because C++17 is not available
+-- Trilinos_NUM_DEFINED_INTERNAL_PACKAGES='162'
+-- Tentatively enabling TPL 'DLlib'
+
+Package dependencies information:
+
+-- Trilinos_NUM_DEFINED_TPLS='120'
+
+-- Trilinos_NUM_DEFINED_INTERNAL_TOPLEVEL_PACKAGES='66'
+
+-- Trilinos_NUM_DEFINED_TOPLEVEL_PACKAGES='186'
+
+-- Trilinos_NUM_DEFINED_INTERNAL_PACKAGES='162'
+
+-- Trilinos_NUM_DEFINED_PACKAGES='282'
+
+Explicitly enabled top-level packages on input (by user):  Sacado 1
+
+Explicitly enabled packages on input (by user):  Sacado 1
+
+Explicitly disabled top-level packages on input (by user or by default):  Teuchos TriKota PyTrilinos NewPackage 4
+
+Explicitly disabled packages on input (by user or by default):  KokkosSimd Teuchos ShyLU_NodeBasker ShyLU_NodeFastILU SEACASExotec2 TriKota ShyLU_DDCore PanzerExprEval PyTrilinos NewPackage 10
+
+Explicitly enabled external packages/TPLs on input (by user):  DLlib 1
+
+Explicitly disabled external packages/TPLs on input (by user or by default):  MPI 1
+
+Disabling all packages that have a required dependency on disabled TPLs and optional package TPL support based on TPL_ENABLE_<TPL>=OFF ...
+
+-- Setting Trilinos_ENABLE_STKCoupling=OFF because STKCoupling has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_STKMesh=OFF because STKMesh has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_STKSearch=OFF because STKSearch has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_STKEmend=OFF because STKEmend has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_ShyLU_DDFROSch=OFF because ShyLU_DDFROSch has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_PanzerDofMgr=OFF because PanzerDofMgr has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_PanzerDiscFE=OFF because PanzerDiscFE has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_PanzerMiniEM=OFF because PanzerMiniEM has a required library dependence on disabled TPL MPI
+-- Setting Trilinos_ENABLE_PikeBlackBox=OFF because PikeBlackBox has a required library dependence on disabled TPL MPI
+
+Disabling subpackages for hard disables of parent packages due to Trilinos_ENABLE_<PARENT_PACKAGE>=OFF ...
+
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosCore=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosParser=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosParameterList=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosComm=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosNumerics=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosRemainder=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosKokkosCompat=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+-- Setting subpackage enable Trilinos_ENABLE_TeuchosKokkosComm=OFF because parent package Trilinos_ENABLE_Teuchos=OFF
+
+Disabling forward required packages and optional intra-package support that have a dependency on disabled packages Trilinos_ENABLE_<TRIBITS_PACKAGE>=OFF ...
+
+-- Setting Trilinos_ENABLE_RTOp=OFF because RTOp has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_MiniTensor=OFF because MiniTensor has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_Triutils=OFF because Triutils has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_ThyraCore=OFF because ThyraCore has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_Zoltan2Core=OFF because Zoltan2Core has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_Intrepid2=OFF because Intrepid2 has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_STKUtil=OFF because STKUtil has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_STKIO=OFF because STKIO has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_STKBalance=OFF because STKBalance has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_Phalanx=OFF because Phalanx has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_Tempus=OFF because Tempus has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_PanzerCore=OFF because PanzerCore has a required library dependence on disabled package TeuchosCore
+-- Setting Trilinos_ENABLE_PikeImplicit=OFF because PikeImplicit has a required library dependence on disabled package TeuchosCore
+-- Setting Sacado_ENABLE_TeuchosCore=OFF because Sacado has an optional library dependence on disabled package TeuchosCore
+-- Setting Zoltan2_ENABLE_TESTS=OFF because Zoltan2 has a required test/example dependence on disabled package TeuchosCore
+-- Setting Zoltan2_ENABLE_EXAMPLES=OFF because Zoltan2 has a required test/example dependence on disabled package TeuchosCore
+-- Setting Sacado_ENABLE_TeuchosComm=OFF because Sacado has an optional library dependence on disabled package TeuchosComm
+-- Setting Sacado_ENABLE_TeuchosNumerics=OFF because Sacado has an optional library dependence on disabled package TeuchosNumerics
+-- Setting Trilinos_ENABLE_TpetraCore=OFF because TpetraCore has a required library dependence on disabled package TeuchosKokkosCompat
+-- Setting Trilinos_ENABLE_Domi=OFF because Domi has a required library dependence on disabled package TeuchosKokkosCompat
+-- Setting Sacado_ENABLE_TeuchosKokkosComm=OFF because Sacado has an optional library dependence on disabled package TeuchosKokkosComm
+-- Setting Trilinos_ENABLE_EpetraExt=OFF because EpetraExt has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_TpetraTSQR=OFF because TpetraTSQR has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Xpetra=OFF because Xpetra has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Isorropia=OFF because Isorropia has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Galeri=OFF because Galeri has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Amesos=OFF because Amesos has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Ifpack=OFF because Ifpack has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Belos=OFF because Belos has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Amesos2=OFF because Amesos2 has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Komplex=OFF because Komplex has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Anasazi=OFF because Anasazi has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Ifpack2=OFF because Ifpack2 has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_FEI=OFF because FEI has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Teko=OFF because Teko has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Intrepid=OFF because Intrepid has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_NOX=OFF because NOX has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Moertel=OFF because Moertel has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_MueLu=OFF because MueLu has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Rythmos=OFF because Rythmos has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Stokhos=OFF because Stokhos has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_ROL=OFF because ROL has a required library dependence on disabled package Teuchos
+-- Setting Trilinos_ENABLE_Piro=OFF because Piro has a required library dependence on disabled package Teuchos
+-- Setting ThyraEpetraAdapters_ENABLE_TESTS=OFF because ThyraEpetraAdapters has a required test/example dependence on disabled package Triutils
+-- Setting ThyraEpetraAdapters_ENABLE_EXAMPLES=OFF because ThyraEpetraAdapters has a required test/example dependence on disabled package Triutils
+-- Setting AztecOO_ENABLE_TESTS=OFF because AztecOO has a required test/example dependence on disabled package Triutils
+-- Setting AztecOO_ENABLE_EXAMPLES=OFF because AztecOO has a required test/example dependence on disabled package Triutils
+-- Setting Trilinos_ENABLE_ThyraEpetraExtAdapters=OFF because ThyraEpetraExtAdapters has a required library dependence on disabled package EpetraExt
+-- Setting Trilinos_ENABLE_Tpetra=OFF because Tpetra has a required library dependence on disabled package TpetraCore
+-- Setting Trilinos_ENABLE_ThyraTpetraAdapters=OFF because ThyraTpetraAdapters has a required library dependence on disabled package Tpetra
+-- Setting Trilinos_ENABLE_ThyraEpetraAdapters=OFF because ThyraEpetraAdapters has a required library dependence on disabled package ThyraCore
+-- Setting Trilinos_ENABLE_Thyra=OFF because Thyra has a required library dependence on disabled package ThyraCore
+-- Setting Trilinos_ENABLE_Stratimikos=OFF because Stratimikos has a required library dependence on disabled package ThyraCore
+-- Setting Trilinos_ENABLE_Zoltan2Sphynx=OFF because Zoltan2Sphynx has a required library dependence on disabled package Zoltan2Core
+-- Setting Trilinos_ENABLE_Zoltan2=OFF because Zoltan2 has a required library dependence on disabled package Zoltan2Core
+-- Setting PanzerAdaptersSTK_ENABLE_TESTS=OFF because PanzerAdaptersSTK has a required test/example dependence on disabled package Ifpack2
+-- Setting PanzerAdaptersSTK_ENABLE_EXAMPLES=OFF because PanzerAdaptersSTK has a required test/example dependence on disabled package Ifpack2
+-- Setting Trilinos_ENABLE_PanzerAdaptersSTK=OFF because PanzerAdaptersSTK has a required library dependence on disabled package Stratimikos
+-- Setting Trilinos_ENABLE_Percept=OFF because Percept has a required library dependence on disabled package Intrepid
+-- Setting Trilinos_ENABLE_Krino=OFF because Krino has a required library dependence on disabled package Intrepid
+-- Setting Trilinos_ENABLE_STKMath=OFF because STKMath has a required library dependence on disabled package STKUtil
+-- Setting Trilinos_ENABLE_STKTopology=OFF because STKTopology has a required library dependence on disabled package STKUtil
+-- Setting Trilinos_ENABLE_STKTransfer=OFF because STKTransfer has a required library dependence on disabled package STKUtil
+-- Setting Trilinos_ENABLE_STKTools=OFF because STKTools has a required library dependence on disabled package STKUtil
+-- Setting Trilinos_ENABLE_STKUnit_test_utils=OFF because STKUnit_test_utils has a required library dependence on disabled package STKUtil
+-- Setting Trilinos_ENABLE_STKSearchUtil=OFF because STKSearchUtil has a required library dependence on disabled package STKUtil
+-- Setting Trilinos_ENABLE_STKExprEval=OFF because STKExprEval has a required library dependence on disabled package STKUtil
+-- Setting STKUnit_tests_ENABLE_TESTS=OFF because STKUnit_tests has a required test/example dependence on disabled package STKUtil
+-- Setting STKUnit_tests_ENABLE_EXAMPLES=OFF because STKUnit_tests has a required test/example dependence on disabled package STKUtil
+-- Setting STKDoc_tests_ENABLE_TESTS=OFF because STKDoc_tests has a required test/example dependence on disabled package STKUtil
+-- Setting STKDoc_tests_ENABLE_EXAMPLES=OFF because STKDoc_tests has a required test/example dependence on disabled package STKUtil
+-- Setting Trilinos_ENABLE_STKSimd=OFF because STKSimd has a required library dependence on disabled package STKMath
+-- Setting Trilinos_ENABLE_ShyLU_DD=OFF because ShyLU_DD has a required library dependence on disabled package ShyLU_DDFROSch
+-- Setting Trilinos_ENABLE_ShyLU=OFF because ShyLU has a required library dependence on disabled package ShyLU_DD
+-- Setting Trilinos_ENABLE_Panzer=OFF because Panzer has a required library dependence on disabled package PanzerCore
+
+Enabling subpackages for hard enables of parent packages due to Trilinos_ENABLE_<PARENT_PACKAGE>=ON ...
+
+
+Disabling subpackage tests/examples based on parent package tests/examples disables ...
+
+
+Enabling subpackage tests/examples based on parent package tests/examples enables ...
+
+
+Enabling all required (and optional since Trilinos_ENABLE_ALL_OPTIONAL_PACKAGES=ON) upstream packages for current set of enabled packages (Trilinos_ENABLE_SECONDARY_TESTED_CODE=ON) ...
+
+-- Setting Trilinos_ENABLE_KokkosCore=ON because Sacado has an optional dependence on KokkosCore
+-- Setting Trilinos_ENABLE_KokkosContainers=ON because Sacado has an optional dependence on KokkosContainers
+
+Enabling all optional intra-package enables <TRIBITS_PACKAGE>_ENABLE_<DEPPACKAGE> that are not currently disabled if both sets of packages are enabled ...
+
+-- Setting Sacado_ENABLE_KokkosCore=ON since Trilinos_ENABLE_Sacado=ON AND Trilinos_ENABLE_KokkosCore=ON
+-- Setting Sacado_ENABLE_KokkosContainers=ON since Trilinos_ENABLE_Sacado=ON AND Trilinos_ENABLE_KokkosContainers=ON
+
+Enabling all remaining required TPLs for current set of enabled packages ...
+
+
+Enabling all optional package TPL support <TRIBITS_PACKAGE>_ENABLE_<DEPTPL> not currently disabled for enabled TPLs ...
+
+-- Setting KokkosCore_ENABLE_DLlib=ON since TPL_ENABLE_DLlib=ON
+
+Enabling TPLs based on <TRIBITS_PACKAGE>_ENABLE_<TPL>=ON if TPL is not explicitly disabled ...
+
+
+Set cache entries for optional packages/TPLs and tests/examples for packages actually enabled ...
+
+
+Enabling the shell of non-enabled parent packages (mostly for show) that have at least one subpackage enabled ...
+
+-- Setting Trilinos_ENABLE_Kokkos=ON because Trilinos_ENABLE_KokkosCore=ON
+-- Setting Kokkos_ENABLE_KokkosCore=ON because Trilinos_ENABLE_KokkosCore=ON
+-- Setting Kokkos_ENABLE_KokkosContainers=ON because Trilinos_ENABLE_KokkosContainers=ON
+
+Final set of enabled top-level packages:  Kokkos Sacado 2
+
+Final set of enabled packages:  KokkosCore KokkosContainers Kokkos Sacado 4
+
+Final set of non-enabled top-level packages:  TrilinosFrameworkTests TrilinosATDMConfigTests Gtest Teuchos KokkosKernels RTOp MiniTensor Epetra Zoltan Shards Triutils EpetraExt Tpetra TrilinosSS Domi Thyra Xpetra Isorropia Pliris AztecOO Galeri Amesos Pamgen Zoltan2Core Ifpack ML Belos ShyLU_Node Amesos2 SEACAS Komplex Anasazi Ifpack2 Stratimikos FEI Teko TriKota Intrepid Intrepid2 Compadre STK Percept Krino Phalanx NOX Moertel MueLu Zoltan2Sphynx Zoltan2 ShyLU_DD ShyLU Rythmos Tempus Stokhos ROL Piro Panzer PyTrilinos NewPackage Adelus TrilinosCouplings Pike TrilinosBuildStats TrilinosInstallTests 64
+
+Final set of non-enabled packages:  TrilinosFrameworkTests TrilinosATDMConfigTests Gtest KokkosAlgorithms KokkosSimd TeuchosCore TeuchosParser TeuchosParameterList TeuchosComm TeuchosNumerics TeuchosRemainder TeuchosKokkosCompat TeuchosKokkosComm Teuchos KokkosKernels RTOp MiniTensor Epetra Zoltan Shards Triutils EpetraExt TpetraTSQR TpetraCore Tpetra TrilinosSS Domi ThyraCore ThyraEpetraAdapters ThyraEpetraExtAdapters ThyraTpetraAdapters Thyra Xpetra Isorropia Pliris AztecOO Galeri Amesos Pamgen Zoltan2Core Ifpack ML Belos ShyLU_NodeHTS ShyLU_NodeTacho ShyLU_NodeBasker ShyLU_NodeFastILU ShyLU_Node Amesos2 SEACASExodus SEACASExodus_for SEACASExoIIv2for32 SEACASNemesis SEACASIoss SEACASChaco SEACASAprepro_lib SEACASSupes SEACASSuplib SEACASSuplibC SEACASSuplibCpp SEACASSVDI SEACASPLT SEACASAlgebra SEACASAprepro SEACASBlot SEACASConjoin SEACASEjoin SEACASEpu SEACASCpup SEACASExo2mat SEACASExodiff SEACASExomatlab SEACASExotxt SEACASExo_format SEACASEx1ex2v2 SEACASExotec2 SEACASFastq SEACASGjoin SEACASGen3D SEACASGenshell SEACASGrepos SEACASExplore SEACASMapvarlib SEACASMapvar SEACASMapvar-kd SEACASMat2exo SEACASNas2exo SEACASZellij SEACASNemslice SEACASNemspread SEACASNumbers SEACASSlice SEACASTxtexo SEACASEx2ex1v2 SEACAS Komplex Anasazi Ifpack2 Stratimikos FEI Teko TriKota Intrepid Intrepid2 Compadre STKUtil STKCoupling STKMath STKSimd STKNGP_TEST STKTopology STKMesh STKIO STKSearch STKTransfer STKTools STKBalance STKUnit_test_utils STKSearchUtil STKUnit_tests STKDoc_tests STKExprEval STKEmend STK Percept Krino Phalanx NOX Moertel MueLu Zoltan2Sphynx Zoltan2 ShyLU_DDFROSch ShyLU_DDCore ShyLU_DDCommon ShyLU_DD ShyLU Rythmos Tempus Stokhos ROL Piro PanzerCore PanzerDofMgr PanzerDiscFE PanzerAdaptersSTK PanzerMiniEM PanzerExprEval Panzer PyTrilinos NewPackage Adelus TrilinosCouplings PikeBlackBox PikeImplicit Pike TrilinosBuildStats TrilinosInstallTests 158
+
+Final set of enabled external packages/TPLs:  DLlib 1
+
+Final set of non-enabled external packages/TPLs:  MKL yaml-cpp Peano CUDA CUBLAS CUSOLVER CUSPARSE Thrust Cusp TBB Pthread HWLOC QTHREAD BinUtils ARPREC QD MPI BLAS LAPACK Boost Scotch OVIS gpcd DataWarp METIS MTMETIS ParMETIS PuLP TopoManager LibTopoMap PaToH CppUnit ADOLC ADIC TVMET MF ExodusII Nemesis XDMF Zlib HDF5 CGNS Pnetcdf Netcdf ADIOS2 Faodel Cereal Catalyst2 y12m SuperLUDist SuperLUMT SuperLU Cholmod UMFPACK MA28 AMD CSparse HYPRE PETSC BLACS SCALAPACK MUMPS STRUMPACK PARDISO_MKL PARDISO Oski TAUCS ForUQTK Dakota HIPS MATLAB CASK SPARSKIT QT gtest BoostLib BoostAlbLib OpenNURBS Portals CrayPortals Gemini InfiniBand BGPDCMF BGQPAMI Pablo HPCToolkit Clp GLPK qpOASES Matio PAPI MATLABLib Eigen X11 Lemon GLM quadmath CAMAL RTlib AmgX CGAL CGALCore VTune TASMANIAN ArrayFireCPU SimMesh SimModel SimParasolid SimAcis SimField Valgrind QUO ViennaCL Avatar mlpack pebbl MAGMASparse Check SARMA 119
+
+Setting up export dependencies for all enabled packages ...
+
+
+Probing the environment ...
+
+-- USE_XSDK_DEFAULTS='FALSE'
+-- BUILD_SHARED_LIBS='FALSE'
+-- CMAKE_BUILD_TYPE='RELEASE'
+-- CMAKE_C_COMPILER_ID='GNU'
+-- CMAKE_C_COMPILER_VERSION='11.3.0'
+-- CMAKE_CXX_COMPILER_ID='GNU'
+-- CMAKE_CXX_COMPILER_VERSION='11.3.0'
+-- Skip adding flags for OpenMP because Kokkos flags does that ...
+-- Trilinos_SET_INSTALL_RPATH='TRUE'
+-- CMAKE_INSTALL_RPATH_USE_LINK_PATH='TRUE'
+-- Setting default for CMAKE_INSTALL_RPATH pointing to Trilinos_INSTALL_LIB_DIR
+-- CMAKE_INSTALL_RPATH='/home/omid/Program/Trilinos-master/lib'
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+
+Getting information for all enabled external packages/TPLs ...
+
+Processing enabled external package/TPL: DLlib (enabled explicitly, disable with -DTPL_ENABLE_DLlib=OFF)
+-- Attempting to tentatively enable TPL 'DLlib' ...
+-- DLlib_LIBRARY_NAMES='dl'
+-- TPL_DLlib_LIBRARIES='/usr/lib/x86_64-linux-gnu/libdl.a'
+-- Attempt to tentatively enable TPL 'DLlib' passed!
+
+Setting up testing support ...
+
+-- CTEST_DROP_METHOD='http'
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+
+Configuring individual enabled Trilinos packages ...
+
+-- NOTE: Can't fill in version date files for Trilinos since /home/omid/Program/Trilinos-master/.git/ does not exist!
+Processing enabled top-level package: Kokkos (Core, Containers)
+-- Setting default Kokkos CXX standard to 14
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_DROP_SITE='testing.sandia.gov'
+-- CTEST_PROJECT_NAME='Trilinos'
+-- CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- CTEST_TRIGGER_SITE=''
+-- CTEST_DROP_SITE_CDASH='TRUE'
+-- TRIBITS_2ND_CTEST_DROP_SITE='testing-dev.sandia.gov'
+-- TRIBITS_2ND_CTEST_DROP_LOCATION='/cdash/submit.php?project=Trilinos'
+-- The project name is: Trilinos
+-- Using -std=c++14 for C++14 standard as feature
+-- Built-in Execution Spaces:
+--     Device Parallel: NoTypeDefined
+--     Host Parallel: NoTypeDefined
+--       Host Serial: SERIAL
+-- 
+-- Architectures:
+-- Using internal desul_atomics copy
+-- Kokkos Devices: SERIAL, Kokkos Backends: SERIAL
+Processing enabled top-level package: Sacado (Libs)
+
+No ETI support requested by packages.
+
+
+Set up for creating a distribution ...
+
+
+Finished configuring Trilinos!
+
+-- If publishing results using Trilinos, please cite us: https://trilinos.github.io/cite.html
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/omid/Program/Trilinos-master/build
+(base) omid@omid-HP:~/Program/Trilinos-master/build$ make install
+Consolidate compiler generated dependencies of target kokkoscore
+[ 73%] Built target kokkoscore
+Consolidate compiler generated dependencies of target kokkoscontainers
+[ 80%] Built target kokkoscontainers
+Consolidate compiler generated dependencies of target sacado
+[100%] Built target sacado
+Install the project...
+-- Install configuration: "RELEASE"
+-- Installing: /home/omid/Program/Trilinos-master/lib/external_packages/DLlib/DLlibConfig.cmake
+-- Installing: /home/omid/Program/Trilinos-master/lib/external_packages/DLlib/DLlibConfigVersion.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Trilinos_version.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Trilinos_version_date.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/include
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Rank.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Atomics_Desul_Config.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_HBWSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Atomic.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_SYCL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_MemoryTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads/Kokkos_Threads_WorkGraphPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads/Kokkos_Threads_Parallel_MDRange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads/Kokkos_Threads_UniqueToken.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads/Kokkos_Threads_Parallel_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads/Kokkos_Threads_Parallel_Range.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads/Kokkos_ThreadsExec.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Threads/Kokkos_ThreadsTeam.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_OpenMP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_MathematicalFunctions.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_Task.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_Parallel_MDRange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_Exec.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_Error.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_UniqueToken.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_Instance.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_Abort.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMPTarget/Kokkos_OpenMPTarget_Parallel.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Memory_Order.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Tools_Generic.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskNode.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Command_Line_Parsing.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskQueueMultiple_impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_HostSharedPtr.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_GraphImpl_fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ViewArray.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Spinwait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_DeviceManagement.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ViewMapping.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_PhysicalLayout.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_View.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/KokkosExp_IterateTileGPU.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_HostSpace_deepcopy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_GraphNodeCustomization.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_MultipleTaskQueue.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_GraphImpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_LinkedListNode.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_AnalyzePolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_GraphNodeImpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Default_GraphNode_Impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Default_Graph_Impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskPolicyData.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Compare_Exchange_Strong.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ExecSpaceManager.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Generic_Secondary.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_GraphImpl_Utilities.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Fetch_And.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ChaseLev.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskQueueCommon.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Volatile_Load.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_LIFO.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Default_Graph_fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Fetch_Or.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskBase.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Traits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Error.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/KokkosExp_Host_IterateTile.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Tools.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ViewTracker.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Profiling.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/KokkosExp_ViewMapping.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_EBO.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Profiling_Interface.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskQueueMemoryManager.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_MinMax.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_FunctorAnalysis.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_MemorySpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Generic.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Store.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_HostBarrier.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ConcurrentBitset.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Exchange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Decrement.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskResult.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Increment.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Profiling_DeviceInfo.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Timer.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Stacktrace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_VLAEmulation.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_QuadPrecisionMath.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Fetch_Sub.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_InitializationSettings.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Fetch_Add.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_OptionalRef.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_FixedBufferMemoryPool.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_SharedAlloc.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Compare_Exchange_Weak.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Load.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskQueueMultiple.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Memory_Fence.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ViewUniformType.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Profiling_C_Interface.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_SingleTaskQueue.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ViewLayoutTiled.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_HostThreadTeam.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ParseCommandLineArgumentsAndEnvironmentVariables.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_MemoryPoolAllocator.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ViewCtor.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_BitOps.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Default_GraphNodeKernel.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskQueue.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskQueue_impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Utilities.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_CPUDiscovery.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_ClockTic.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_TaskTeamMember.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_SimpleTaskScheduler.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Combined_Reducer.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Windows.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Atomic_Assembly.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_StringManipulation.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_SharedAlloc_timpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_AnonymousSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_HIP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_View.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Profiling_ProfileSection.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_LogicalSpaces.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Layout.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_HostSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_ScheduleTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_Traits_fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_GraphKernelTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_WorkItemPropertyTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_WorkTagTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_IterationPatternTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_PolicyTraitMatcher.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_PolicyTraitAdaptor.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_OccupancyControlTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_IndexTypeTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_LaunchBoundsTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/traits/Kokkos_ExecutionSpaceTrait.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosExp_MDRangePolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Pair.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Serial.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_WorkGraphPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_MinMaxClamp.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosExp_InterOp.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Vectorization.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Core.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Graph.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/View
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/View/Hooks
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/View/Hooks/Kokkos_ViewHooks.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_MathematicalSpecialFunctions.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_MathematicalConstants.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_CopyViews.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMP
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMP/Kokkos_OpenMP_Task.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMP/Kokkos_OpenMP_WorkGraphPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMP/Kokkos_OpenMP_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMP/Kokkos_OpenMP_Instance.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenMP/Kokkos_OpenMP_Parallel.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_SERIAL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_OPENMP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_CUDA.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_HBWSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_HIP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_OPENACC.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_OPENMPTARGET.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_THREADS.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_HPX.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/fwd/Kokkos_Fwd_SYCL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_MasterLock.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Parallel_Range.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Error.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_GraphNodeKernel.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Parallel_MDRange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Parallel_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_WorkGraphPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Vectorization.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Alloc.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Instance.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Atomic_Intrinsics_Restore_Builtins.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_abort.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_BlockSize_Deduction.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Task.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_ReduceScan.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Half_Conversion.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Atomic_Intrinsics.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Locks.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Graph_Impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_KernelLaunch.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_UniqueToken.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_View.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_GraphNode_Impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_MDRangePolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Cuda/Kokkos_Cuda_Half_Impl_Type.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_DetectionIdiom.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_TaskPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_HPX.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_CudaSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Abort.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Shuffle_Reduce.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Vectorization.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_ReduceScan.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_UniqueToken.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Locks.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_KernelLaunch.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Instance.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Atomic.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Half_Conversion.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Half_Impl_Type.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Error.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Parallel_MDRange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_BlockSize_Deduction.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Parallel_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_MDRangePolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_Parallel_Range.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HIP/Kokkos_HIP_WorkGraphPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_UniqueToken.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Concepts.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HPX
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HPX/Kokkos_HPX_WorkGraphPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/HPX/Kokkos_HPX_Task.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Crs.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_NumericTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Atomics_Desul_Wrapper.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_SYCL_Space.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_OpenMPTarget.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_ExecPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Array.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Timer.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/setup
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/setup/Kokkos_Setup_HIP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/setup/Kokkos_Setup_Cuda.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/setup/Kokkos_Setup_SYCL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Cuda.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Parallel.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_PointerOwnership.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_ScratchSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_TaskScheduler.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Serial
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Serial/Kokkos_Serial_Task.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Serial/Kokkos_Serial_Parallel_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Serial/Kokkos_Serial_WorkGraphPolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Serial/Kokkos_Serial_Parallel_Range.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Serial/Kokkos_Serial_UniqueToken.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Serial/Kokkos_Serial_Parallel_MDRange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_HPX.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_THREADS.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_CUDA.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_OPENMP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_OPENACC.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_SYCL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_HBWSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_SERIAL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_OPENMPTARGET.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/decl/Kokkos_Declare_HIP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Half_Conversion.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Half_Impl_Type.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_MDRangePolicy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Abort.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Parallel_Scan.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_UniqueToken.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Parallel_Range.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Parallel_Reduce.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_DeepCopy.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Instance.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Parallel_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/SYCL/Kokkos_SYCL_Team.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Half.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Threads.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Macros.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_OpenMPTargetSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenACC
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenACC/Kokkos_OpenACC.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenACC/Kokkos_OpenACC_Traits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenACC/Kokkos_OpenACCSpace.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/OpenACC/Kokkos_OpenACC_Instance.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Parallel_Reduce.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Future.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_hwloc.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Extents.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_AcquireUniqueTokenImpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_MemoryPool.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_GraphNode.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_HIP_Space.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Atomics_Desul_Volatile_Wrapper.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Tuners.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Core_fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_TaskScheduler_fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Complex.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Graph_fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Lock_Array_Cuda.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/OpenMP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_CUDA.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Macros.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_Serial.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_MSVC.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/HIP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Generic.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/openmp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/openmp/OpenMP_40_op.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/openmp/OpenMP_40.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_fetch_op.inc_forceglobal
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_op.inc_forceglobal
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/CUDA_asm_exchange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_fetch_op.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_fetch_op.inc_generic
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_op.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_op.inc_isglobal
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_exchange_op.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_exchange.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_op.inc_predicate
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_fetch_op.inc_isglobal
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_exchange_memorder.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_memorder.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_op.inc_generic
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm.inc
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/CUDA_asm.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/cuda/cuda_cc7_asm_atomic_fetch_op.inc_predicate
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/SYCLConversions.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/CUDA.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_HIP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/SYCL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_OpenMP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_GCC.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Common.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Lock_Array_HIP.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_SYCL.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Atomic_Ref.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/GCC.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Lock_Array.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics/Compare_Exchange_ScopeCaller.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/desul/atomics.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/libkokkoscore.a
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/KokkosCore/KokkosCoreConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/KokkosCore/KokkosCoreTargets.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/KokkosCore/KokkosCoreTargets-release.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/include
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_UnorderedMap.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Bitset_impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_Functional_impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_UnorderedMap_impl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/impl/Kokkos_StaticCrsGraph_factory.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Bitset.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_ScatterView.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Functional.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_DynRankView.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_StaticCrsGraph.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_DualView.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_OffsetView.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_Vector.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_ErrorReporter.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_DynamicView.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/libkokkoscontainers.a
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/KokkosContainers/KokkosContainersConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/KokkosContainers/KokkosContainersTargets.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/KokkosContainers/KokkosContainersTargets-release.cmake
+-- Installing: /home/omid/Program/Trilinos-master/lib/cmake/Kokkos/KokkosConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/Kokkos/KokkosTargets.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/Kokkos/KokkosConfigVersion.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosCore_config.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/bin/nvcc_wrapper
+-- Up-to-date: /home/omid/Program/Trilinos-master/bin/hpcbind
+-- Up-to-date: /home/omid/Program/Trilinos-master/bin/kokkos_launch_compiler
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosCore_config.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosCore_Config_FwdBackend.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosCore_Config_SetupBackend.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosCore_Config_DeclareBackend.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosCore_Config_PostInclude.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/libsacado.a
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_config.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_MathFunctions.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_Expression.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_ExpressionTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_ExprAssign.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_Extender.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_GeneralFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_GeneralFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_Ops_Fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_Ops.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_DynamicStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_StaticStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_StaticFixedStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_VectorDynamicStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_ViewStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_DFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_SLFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_SFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_ViewFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_DVFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Exp_Atomic.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_GeneralFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_GeneralFadExpr.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_GeneralFadTestingHelpers.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_ExpressionTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_ExpressionFwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Expression.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Ops_Fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Ops.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_DynamicStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_DFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_DFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_StaticStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SLFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SLFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_DVFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_DVFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_Vector.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_VectorImp.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_VectorDynamicStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SimpleFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SimpleFadImp.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SimpleFadOps.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SimpleFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_ViewStorage.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_ViewFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_ViewFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_DFad_tmpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SFad_tmpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_SLFad_tmpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Fad_ViewFad_tmpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_GeneralFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_GeneralFadExpr.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_ExpressionTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_Expression.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_Ops.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_DFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_DFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_SLFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_SLFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_SFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_SFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_ViewFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRFad_ViewFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_LFad_LogicalSparse.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_LFad_LogicalSparseOps.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_LFad_LogicalSparseTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_LFad_ExpressionTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_GeneralFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_GeneralFadExpr.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_ExpressionTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_Expression.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_Ops.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_DFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_DFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_SFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_SFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_SLFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_SLFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_ViewFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_CacheFad_ViewFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_GeneralFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_GeneralFadExpr.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_ExpressionTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_Expression.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_Ops.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_DFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_DFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_SLFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_SLFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_SFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_SFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_ViewFad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ELRCacheFad_ViewFadTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_CacheTaylorTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_CacheTaylor.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_CacheTaylorImp.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_CacheTaylorExpr.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_CacheTaylorOps.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_TaylorTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_Taylor.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Tay_TaylorImp.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_trad_Traits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_trad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_trad2_Traits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_trad2.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_tradvec_Traits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_tradvec.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_rad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_rad2.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_DynamicArrayTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_StaticArrayTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Handle.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_TemplateContainer.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_is_same.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_is_convertible.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_enable_if.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_disable_if.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_if.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_none.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_begin.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_end.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_next.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_size.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_at.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_deref.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_push_back.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_find.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_for_each.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_vector.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_vector_size_spec.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_vector_at_spec.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_vector_push_back_spec.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_integral_c.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_range_c.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_apply.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_apply_wrap.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_bind.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_has_type.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_lambda.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_placeholders.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_quote.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_type_wrap.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_is_placeholder.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_integral_nonzero_constant.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_void.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_mpl_has_equal_to.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ScalarFlopCounter.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ScalarFlopCounterTraits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_ConfigDefs.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Version.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Traits.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_No_Kokkos.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_View_Fad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_DynRankView_Fad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_DynRankView_Fad_Contiguous.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_LayoutContiguous.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_LayoutNatural.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_View_Fad_Fwd.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosExp_View_Fad.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/KokkosExp_View_Fad_Contiguous.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Kokkos_ViewFactory.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_DisableKokkosCuda.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_MathFunctions.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_cmath.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_dummy_arg.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_Base.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/include/Sacado_SFINAE_Macros.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/Sacado/SacadoConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/Sacado/SacadoTargets.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/Sacado/SacadoTargets-release.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/Trilinos/TrilinosConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/Trilinos/TrilinosConfigVersion.cmake
+-- Installing: /home/omid/Program/Trilinos-master/include/TrilinosConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/rst2latex.tex
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsGuidesReferences.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsGuidesBody.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/UtilsMacroFunctionDocTemplate.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsToolsDocumentation.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/Makefile.common_generated_files
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsSystemMacroFunctionDocTemplate.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsCoreDetailedReference.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/scripts
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/scripts/dummy_test_commit.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/NoEnables.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableThyra_EnableTests.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableThyra_DisableEpetra_EnableTests.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableThyra_EnableTests_EnableBoost_ST_RequiredOnly.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableThyraEpetra_EnableTests.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableThyraCoreLibs_EnableTests.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableThyra_EnableTests_EnableBoost_ST.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableAllPackages.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableEpetra_EnableRTOp_DisableTeuchos.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/EnableEpetra_EnableRTOp_DisableTeuchos_DisableEnabledFwdDepPackages.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ReducedMockTrilinosOutput/ExpectedDependencies.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsHistory.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/users_guide
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/users_guide/TribitsCoreDetailedReference.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/users_guide/TribitsUsersGuide.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/users_guide/Makefile
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/users_guide/.gitignore
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsDesignConsiderations.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/ExtraReposList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/maintainers_guide
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/maintainers_guide/TribitsCoreDetailedReference.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/maintainers_guide/TribitsMaintainersGuide.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/maintainers_guide/Makefile
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/maintainers_guide/.gitignore
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/generate-guide.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsMacroFunctionDocTemplate.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/.gitignore
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsPackageNotCMakePackage.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/guides/TribitsFAQ.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/publish_docs.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref/TribitsBuildReferenceBody.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref/TribitsBuildReferenceTemplate.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref/create-build-ref.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref/create-project-build-ref.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref/Makefile
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_ref/.gitignore
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/utils
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/utils/gen_doc_utils.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/README.md
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/generate-tutorial.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/src/TribitsTutorial_ProjectStructure.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/src/TribitsTutorial_ConvertAProject.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/src/TribitsTutorial_HelloWorld.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/src/TribitsTutorial_Dependencies.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/tutorial/.gitignore
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/build_docs.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/index.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/build_ref
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/build_ref/__init__.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/build_ref/make.bat
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/build_ref/conf.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/build_ref/Makefile
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/users_guide
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/users_guide/__init__.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/users_guide/make.bat
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/users_guide/conf.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/users_guide/Makefile
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/build_sphinx_docs.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/maintainers_guide
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/maintainers_guide/__init__.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/maintainers_guide/make.bat
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/maintainers_guide/conf.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/maintainers_guide/Makefile
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/combined_docs
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/combined_docs/index.html
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/requirements.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/sphinx/sphinx_rst_generator.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/doc/.gitignore
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/tpls
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/tpls/FindTPLPETSC.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/tpls/FindTPLMPI.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/tpls/FindTPLCUDA.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/tpls/TribitsDeprecatedTplFindModInclude.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl2
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl2/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl2/Tpl2b.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl2/Tpl2a.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl2/Tpl2a.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl2/Tpl2Config.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl2/Tpl2b.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl4
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl4/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl4/Tpl4.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl4/Tpl4Config.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/SimpleTpl
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/SimpleTpl/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/SimpleTpl/SimpleTpl.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/SimpleTpl/SimpleTpl.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl1
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl1/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl1/Tpl1.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl1/Tpl1.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/HeaderOnlyTpl
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/HeaderOnlyTpl/HeaderOnlyTpl_stuff.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl3
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl3/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl3/Tpl3.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl3/Tpl3.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/tpls/Tpl3/Tpl3Config.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsSimpleExampleApp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsSimpleExampleApp/README.md
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsSimpleExampleApp/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsSimpleExampleApp/util.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsSimpleExampleApp/app.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsOldSimpleExampleApp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsOldSimpleExampleApp/README.md
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsOldSimpleExampleApp/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsOldSimpleExampleApp/util.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsOldSimpleExampleApp/app.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp2
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp2/README.md
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp2/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp2/AppHelperFuncs.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp2/app.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp/README.md
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp/AppHelperFuncs.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleApp/app.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/triutils
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/triutils/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/triutils/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/epetra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/epetra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/epetra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/rtop
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/rtop/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/rtop/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/adapters
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/adapters/epetra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/adapters/epetra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/adapters/epetra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/adapters/epetraext
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/adapters/epetraext/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/adapters/epetraext/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/crazy_stuff
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/crazy_stuff/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/crazy_stuff/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/src/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/src/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/good_stuff
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/good_stuff/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/thyra/good_stuff/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/teuchos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/teuchos/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/teuchos/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/epetraext
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/epetraext/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/ReducedMockTrilinos/packages/epetraext/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_only
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_only/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_only/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_only/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_only/StaticOnly.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_only/StaticOnly.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/SharedOnly.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/SharedOnly.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/shared_only/test/SharedOnly_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_exec
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_exec/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_exec/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_exec/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_exec/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_exec/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MixedSharedStaticLibs/static_exec/test/StaticOnly_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/InsertedPkg.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/InsertedPkg.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/InsertedPkg/test/InsertedPkg_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/Version.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls/FindTPLTpl2Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls/FindTPLTpl4Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls/FindTPLTpl1.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls/FindTPLTpl2.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls/FindTPLTpl3.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls/FindTPLTpl4.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/cmake/tpls/FindTPLTpl3Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/src/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/src/Package1_Prg.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/src/Package1.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package1/src/Package1.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/cmake/Package3_config.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/src/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/src/Package3.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/src/Package3.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package3/src/Package3_Prg.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/cmake/Package2_config.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/src/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/src/Package2_Prg.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/src/Package2.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject2/packages/package2/src/Package2.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/TargetDefinesPkg.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/test/deprecated_defines
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/test/deprecated_defines/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/test/TargetDefinesPkg_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TargetDefinesPkg/TargetDefinesPkg.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/Version.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/cmake/ctest
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/cmake/ctest/TribitsExMetaProjCTestDriver.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/cmake/ctest/CTestCustom.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/cmake/ctest/general_gcc
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/cmake/ctest/general_gcc/ctest_serial_debug.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/cmake/ExtraRepositoriesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/CTestConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleMetaProject/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/hello_world
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/hello_world/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/hello_world/hello_world_main.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/hello_world/hello_world_unit_tests.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/hello_world/hello_world_lib.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawHelloWorld/hello_world/hello_world_lib.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/hello_world_main.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/CMakeLists.tribits.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/hello_world_unit_tests.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/hello_world_lib.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/RawAndTribitsHelloWorld/hello_world/hello_world_lib.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackage
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackage/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackage/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackage/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackage/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/package1
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/package1/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/package1/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/package2
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/package2/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/package2/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoTwoPackages/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/Copyright.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/Version.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp2
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp2/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp2/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp1
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp1/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp1/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp3
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp3/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraRepoOnePackageThreeSubpackages/sp3/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/Reduced_preCopyrightTrilinos_PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/RepositoryDependenciesSetup.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/NativeRepositoriesList1.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/ProjectDependenciesSetup.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/CallbackSetupExtraOptions.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/cmake/ExtraRepositoriesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/CTestConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraTrilinosRepo
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraTrilinosRepo/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraTrilinosRepo/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraTrilinosRepo/extrapack
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraTrilinosRepo/extrapack/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/extraTrilinosRepo/extrapack/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preRepoOnePackage
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preRepoOnePackage/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preRepoOnePackage/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preRepoOnePackage/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preRepoOnePackage/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/phalanx
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/phalanx/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/phalanx/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/triutils
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/triutils/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/triutils/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/epetra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/epetra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/epetra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/shards
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/shards/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/shards/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/isorropia
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/isorropia/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/isorropia/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/ml
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/ml/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/ml/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/belos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/belos/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/belos/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/rtop
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/rtop/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/rtop/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/amesos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/amesos/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/amesos/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/aztecoo
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/aztecoo/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/aztecoo/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/ifpack
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/ifpack/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/ifpack/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/epetra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/epetra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/epetra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/tpetra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/tpetra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/tpetra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/epetraext
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/epetraext/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/adapters/epetraext/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/crazy_stuff
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/crazy_stuff/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/crazy_stuff/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/good_stuff
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/good_stuff/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/thyra/src/good_stuff/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/stokhos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/stokhos/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/stokhos/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/TriKota
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/TriKota/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/rbgen
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/rbgen/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/rbgen/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/teuchos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/teuchos/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/teuchos/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/teuchos/extrastuff
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/teuchos/extrastuff/stuff.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/zoltan
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/zoltan/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/zoltan/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/tpetra
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/tpetra/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/tpetra/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/stratimikos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/stratimikos/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/stratimikos/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/sacado
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/sacado/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/sacado/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/panzer
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/panzer/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/panzer/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/epetraext
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/epetraext/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/epetraext/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/galeri
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/galeri/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/galeri/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/intrepid
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/intrepid/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/packages/intrepid/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/stalix
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/stalix/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/stalix/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/teko
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/teko/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/MockTrilinos/preCopyrightTrilinos/teko/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/Version.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/cmake/ExtraRepositoriesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/tests
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/tests/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/tests/Addon1_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/src/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/src/Addon1.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProjectAddons/packages/addon1/src/Addon1.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world/hello_world_main.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world/hello_world_unit_tests.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world/hello_world_lib.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsHelloWorld/hello_world/hello_world_lib.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/README.md
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/PackagesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/Copyright.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/Version.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/project-checkin-test-config.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/LICENSE
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/tpls
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/tpls/FindTPLHeaderOnlyTpl.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/tpls/FindTPLSimpleTpl.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/CallbackDefineRepositoryPackaging.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/CallbackSetupExtraOptions.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/CallbackDefineProjectPackaging.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/ctest
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/ctest/CTestCustom.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/ctest/TribitsExProjCTestDriver.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/ctest/general_gcc
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/ctest/general_gcc/ctest_serial_debug.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/ProjectCiFileChangeLogic.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/cmake/ExtraRepositoriesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/TPLsList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/CTestConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/sampleScripts
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/sampleScripts/linux-serial-debug.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/sampleScripts/linux-mpi-debug.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/ProjectName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/.gitignore
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/cmake/WithSubpackagesA_config.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/A.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/tests
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/tests/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/tests/a_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/a/A.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/ExcludeFromRelease.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/cmake/WithSubpackagesB_config.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/stuff
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/stuff/exec_script.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/stuff/regular_file.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/b_mixed_lang_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/ShowLibErrors.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/testlib
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/testlib/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/testlib/b_test_utils.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/testlib/ShowLibErrors.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/testlib/b_mixed_lang.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/testlib/b_test_utils.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/testlib/b_mixed_lang.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/tests/b_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/src/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/src/AlsoExcludeFromTarball.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/src/ShowLibErrors.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/src/B.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/b/src/B.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/c_util.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/ShowLibErrors.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/wsp_c
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/wsp_c/C.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/C.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/tests
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/tests/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/tests/c_test.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/tests/test_of_c_b_mixed_lang.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/tests/c_b_mixed_lang.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/with_subpackages/c/tests/c_b_mixed_lang.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/cmake/SimpleCxx_config.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/cmake/CheckFor__int64.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/test/SimpleCxx_HelloWorld_Tests.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/src/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/src/SimpleCxx_HelloWorld.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/src/SimpleCxx_HelloWorld_Prog.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/simple_cxx/src/SimpleCxx_HelloWorld.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/cmake/SimpleCxx_config.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/external_func
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/external_func/external_func.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/external_func/configure.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/external_func/external_func.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/wrap_external/run_external_func.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/cmake/MixedLang_config.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/cmake/Dependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/test
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/test/tstRay_Tracer.cc
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/test/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/Ray.hh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/Ray_Tracer.hh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/MixedLang.cpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/Ray_Tracer_Kernel.f90
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/Vector_Lite.hh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/Ray_Tracer.cc
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/MixedLang.hpp
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/examples/TribitsExampleProject/packages/mixed_lang/src/Parameters.f90
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/snapshot_tribits.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/refactoring
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/refactoring/lower-case-cmake-tree.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/TriBITS.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/Copyright.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/Version.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/xsdk
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/xsdk/XSDKDefaults.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLCGNSDependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLNetcdf.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLPnetcdf.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLHDF5.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLBoost.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLLAPACK.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLProjectLastLib.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLHYPRE.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/find_modules
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/find_modules/FindNetCDF.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/find_modules/FindHDF5.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/find_modules/FindPNetCDF.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/find_modules/FindCGNS.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLPETSC.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLBLAS.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/utils
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/utils/ParseLibraryList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/utils/AddImportedLibrary.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/utils/AddPackageDependency.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLCGNS.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLBinUtils.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/common_tpls/FindTPLNetcdfDependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/FindGeneralScriptSupport.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/install-gcc.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/InstallProgramDriver.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/install-openmpi.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/install-mpich.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/0001-CTest-Add-CTEST_RESOURCE_SPEC_FILE-variable.patch
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/install_devtools.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/load_dev_env.sh.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/install-cmake.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/install-autoconf.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/load_dev_env.csh.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/devtools_install/install-git.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/FindGeneralScriptSupport.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/get-tribits-packages.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/cdash_analyze_and_report.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/TribitsGetExtraReposForCheckinTest.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/filter-packages-list.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/CheckinTestConstants.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/TribitsStripCommentsFromCMakeCacheFile.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/is_checkin_tested_commit.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/checkin-test.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/CDashQueryAnalyzeReport.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/clone_extra_repos.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/get-tribits-packages-from-files-list.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/CheckinTest.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/dump-package-dep-table.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/TribitsWriteXmlDependenciesFiles.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/TribitsDumpDepsXmlScript.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/cdash_build_testing_date.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/get-tribits-packages-from-last-tests-failed.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/TribitsDependencies.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/TribitsPackageFilePathUtils.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/CreateIssueTrackerFromCDashQuery.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ci_support/TribitsPackageTestNameUtils.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/dashboard_driver
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/dashboard_driver/LocateCTestAndRunScript.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/dashboard_driver/tdd_driver.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/dashboard_driver/CTestCustom.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/dashboard_driver/TribitsDriverDashboard.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/dashboard_driver/TribitsDriverCMakeLists.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/dashboard_driver/TribitsDriverSupport.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/TriBITSConfig.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/win_interface
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/win_interface/include
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/win_interface/include/gettimeofday.c
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/win_interface/include/winmath.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/win_interface/include/winprocess.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/win_interface/include/unistd.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/win_interface/include/strings.h
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/TribitsReadTagFile.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/TribitsCTestDriverCoreHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/dump-cdash-deps-xml-file.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/README
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/experimental_build_test.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/TribitsGetCDashUrlsInsideCTestS.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/tribits_ctest_update_commands_wrapper.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/makeCMakeCacheFile.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/TribitsCTestDriverCore.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/tribits_ctest_update_commands.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/TribitsGetCTestTestXmlDir.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/ctest_driver/TribitsAddDashboardTarget.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsInstallHeaders.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsFortranMangling.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddAdvancedTestHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddAdvancedTest.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsGlobalMacros.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsProcessEnabledTpl.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsGeneralMacros.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsListHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsTestCategories.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsSystemDataStructuresMacrosFunctions.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/VersionDate.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsSetupMPI.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsPrintEnabledPackagesLists.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddInstallGroupAndPermsFixups.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsFindPythonInterp.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsBLASMangling.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsProject.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsExternalPackageFindTplHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsConfigureCTestCustom.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsPackageDefineDependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsGetVersionDate.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsCopyFilesToBinaryDir.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsReadAllProjectDepsFilesCreateDepsGraph.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsSetupStrongCompileWarnings.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsIncludeDirectories.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsPackageDependencies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsPackageSetupCompilerFlags.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/Tribits_version_date.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddTestHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsLibraryMacros.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsWriteClientExportFiles.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAdjustPackageEnables.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddOptionAndDefine.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsTplDeclareLibraries.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsExternalPackageWriteConfigFile.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsFindMostRecentFileTimestamp.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsPkgExportCacheVars.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsCreateClientTemplateHeaders.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsLibIsTestOnly.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddExecutableTestHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsSortListAccordingToMasterList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsPrintDependencyInfo.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/tribits_get_version_date.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsProcessPackagesAndDirsLists.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsConstants.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsSetupBasicCompileLinkFlags.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsTplFindIncludeDirsAndLibraries.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsGenerateResourceSpecFile.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddLibrary.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsProcessExtraRepositoriesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsETISupport.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsCommonArgsHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsReadDepsFilesCreateDepsGraph.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsGitRepoVersionInfo.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsCMakePolicies.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsPackageMacros.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsHostType.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsProjectImpl.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddExecutableAndTest.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddTest.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsSubPackageMacros.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsAddExecutable.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsProcessTplsLists.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsVerbosePrintVar.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsDefineStandardCompileVars.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsConfigureFile.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/Tribits_version.h.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/package_arch/TribitsReportInvalidTribitsUsage.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/add_install_group_and_perms_fixups
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/add_install_group_and_perms_fixups/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/TribitsInstallationTestingMacros.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/set_installed_group_and_permissions.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/add_project_install_commands
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/add_project_install_commands/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/TribitsProjectConfigTemplate.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/TribitsPackageConfigTemplate.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/TribitsConfigInclude.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/installation/cmake_pbp_install.cmake.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/ConcatStrings.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AppendGlobalSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsPrintList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/ParseVariableArguments.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsGetImportedLocationProperty.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsParseArgumentsHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/PrependGlobalSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/NinjaMakefileCommon.make
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/UseCcacheIfExists.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/SetCacheOnOffEmpty.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/GetLastDirName.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/GenerateNinjaMakefiles.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/MultilineSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/Join.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/SetDefaultAndFromEnv.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/FindProgramPlus.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AdvancedOption.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/PrintNonemptyVar.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AppendSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/DualScopePrependCmndlineArgs.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/PrintVarWithSpaces.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AssertAndTouchDefined.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsGetCategoriesString.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/DualScopeSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/DriveAdvancedTest.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/PrintVar.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/PrependSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsStripQuotesFromStr.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/GlobalSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/CMakeBuildTypesList.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/PrependCmndlineArgs.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/GlobalNullSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/FindListElement.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/SetDefault.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AdvancedSet.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/PrintNonemptyVarWithSpaces.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/DualScopeAppendCmndlineArgs.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsStandardizePaths.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/CombinedOption.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/Split.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AddSubdirectories.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AppendStringVar.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/RemoveGlobalDuplicates.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TimingUtils.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/SetAndIncDirs.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/UnitTestHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AppendStringVarWithSep.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsGatherBuildTargets.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/MessageWrapper.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AssertDefined.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/TribitsFilepathHelpers.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AppendGlob.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/SetNotFound.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/NinjaMakefile.in
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/GetCurrentListDir.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/AppendCmndlineArgs.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/utils/CMakeOverrides.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/std_tpls
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/std_tpls/FindTPLMPI.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/std_tpls/FindTPLCUDA.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/FortranMangling.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/BLASMangling.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/FiniteValue.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/MathLibraryNeeded.cmake
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/blasmangle
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/blasmangle/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/blasmangle/blasmangle.c
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/fmangle
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/fmangle/CMakeLists.txt
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/fmangle/fmangle.f
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/core/config_tests/fmangle/cmangle.c
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/README.DIRECTORY_CONTENTS.rst
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/CHANGELOG.md
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/snapshot-dir.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/generate-docutils-output.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/GenerateDocUtilsOutput.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/GeneralScriptSupport.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/lower_case_cmake.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/gitdist.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/mockprogram.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/download-cmake.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/extract_rst_cmake_doc.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/Python2and3.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/git-config-alias.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/SnapshotDir.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/gitdist-setup.sh
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/mailmsg.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/CMakeVersions.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/CMakeBinaries.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/generic-looping-demon.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/tree.py
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/gitdist
+-- Up-to-date: /home/omid/Program/Trilinos-master/lib/cmake/tribits/python_utils/.gitignore
+(base) omid@omid-HP:~/Program/Trilinos-master/build$ 
+
+
